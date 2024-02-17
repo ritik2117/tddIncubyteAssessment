@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b55257c9-c5da-41d9-9d41-8906cd2e7b9d" name="Changes" comment="">
+    <list default="true" id="b55257c9-c5da-41d9-9d41-8906cd2e7b9d" name="Changes" comment="Added tst cases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringCalculator.java" afterDir="false" />
     </list>
@@ -58,11 +58,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708148397719</updated>
-      <workItem from="1708148398710" duration="6388000" />
+      <workItem from="1708148398710" duration="10740000" />
     </task>
+    <task id="LOCAL-00001" summary="Added tst cases">
+      <option name="closed" value="true" />
+      <created>1708157758712</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708157758712</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added tst cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tst cases" />
   </component>
 </project>
