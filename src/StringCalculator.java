@@ -9,11 +9,10 @@ public class StringCalculator {
 
 //        Split the input string by commas and sum up the integers
         String delimiter = ",|\\\\n";
-        String newLineDelimiter = "\\\\n";
         if (numbers.startsWith("//")) {
-            int delimiterIndex = numbers.indexOf(newLineDelimiter);
+            int delimiterIndex = numbers.indexOf("\\n");
             delimiter = numbers.substring(2, delimiterIndex);
-            numbers = numbers.substring(delimiterIndex + 1);
+            numbers = numbers.substring(delimiterIndex + 2);
         }
         if (numbers == null || numbers.isEmpty()) {
             return 0;
