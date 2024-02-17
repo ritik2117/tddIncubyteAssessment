@@ -9,8 +9,9 @@ public class StringCalculator {
 
 //        Split the input string by commas and sum up the integers
         String delimiter = ",|\\\\n";
+        String newLineDelimiter = "\\\\n";
         if (numbers.startsWith("//")) {
-            int delimiterIndex = numbers.indexOf("\n");
+            int delimiterIndex = numbers.indexOf(newLineDelimiter);
             delimiter = numbers.substring(2, delimiterIndex);
             numbers = numbers.substring(delimiterIndex + 1);
         }
@@ -20,7 +21,6 @@ public class StringCalculator {
         int sum = 0;
         int flagNeg = 0;
         String[] numberArray = numbers.split(delimiter);
-//        String[] numberArray = numbers.split(delimiter);
         StringBuilder negativeNumbers = new StringBuilder();
         for (String number : numberArray) {
             try {
@@ -28,9 +28,10 @@ public class StringCalculator {
                 if (num < 0) {
                     flagNeg = 1;
                     if (negativeNumbers.length() > 0) {
-                        negativeNumbers.append(", ");
+                        negativeNumbers.append(", " + number);
+                    } else {
+                        negativeNumbers.append(number);
                     }
-                    negativeNumbers.append(number);
                 }
                 if (num > 0) {
                     sum += num;
