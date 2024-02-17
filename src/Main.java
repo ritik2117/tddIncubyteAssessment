@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
-        System.out.print("Enter a number (Type X to stop)\n");
+        System.out.print("Enter numbers\n");
         String number = scanner.nextLine();
         sb.append(number);
         String input = sb.toString();

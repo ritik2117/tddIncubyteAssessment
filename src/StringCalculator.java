@@ -8,7 +8,11 @@ public class StringCalculator {
         int sum = 0;
         String[] numberArray = numbers.split(",");
         for (String number : numberArray) {
-            sum += Integer.parseInt(number);
+            try {
+                sum += Integer.parseInt(number);
+            } catch (NumberFormatException e) {
+                return sum;
+            }
         }
         return sum;
     }
