@@ -14,6 +14,9 @@ public class StringCalculator {
             delimiter = numbers.substring(2, delimiterIndex);
             numbers = numbers.substring(delimiterIndex + 1);
         }
+        if (numbers == null || numbers.isEmpty()) {
+            return 0;
+        }
         int sum = 0;
         int flagNeg = 0;
         String[] numberArray = numbers.split(delimiter);
