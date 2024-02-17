@@ -1,3 +1,5 @@
+import java.util.regex.Pattern;
+
 public class StringCalculator {
     public static int add(String numbers) {
 //        Check if the input string is empty or null
@@ -5,11 +7,28 @@ public class StringCalculator {
             return 0;
         }
 //        Split the input string by commas and sum up the integers
+        String delimiter = ",";
+        if (numbers.startsWith("//")) {
+            int delimiterIndex = numbers.indexOf('\n');
+            delimiter = numbers.substring(2, delimiterIndex);
+            numbers = numbers.substring(delimiterIndex + 1);
+        }
         int sum = 0;
-        String[] numberArray = numbers.split(",");
+        String[] numberArray = numbers.split("[\n" + Pattern.quote(delimiter) + "]");
+        StringBuilder negativeNumbers = new StringBuilder();
         for (String number : numberArray) {
             try {
-                sum += Integer.parseInt(number);
+                int num = Integer.parseInt(number);
+                if (num < 0) {
+                    if (negativeNumbers.length() > 0) {
+                        negativeNumbers.append(", ");
+                    }
+                    negativeNumbers.append(number);
+                }
+                if (num < 0) {
+                    throw new IllegalArgumentException("negative numbers not allowed " + negativeNumbers);
+                }
+                sum += num;
             } catch (NumberFormatException e) {
                 return sum;
             }
